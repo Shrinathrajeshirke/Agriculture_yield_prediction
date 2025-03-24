@@ -1,0 +1,13 @@
+prefix=D:/agri_yield_forecastt/venv/Library
+exec_prefix=D:/agri_yield_forecastt/venv/Library
+libdir=D:/agri_yield_forecastt/venv/Library/lib
+sharedlibdir=D:/agri_yield_forecastt/venv/Library/lib
+includedir=D:/agri_yield_forecastt/venv/Library/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.13
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}
