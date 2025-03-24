@@ -1,0 +1,48 @@
+<html>
+<body>
+    <div class="login">
+        <h1>Agriculture yield forecast</h1>
+    
+        <form action="{{ url_for('predict_datapoint')}}" method="post">
+         <h1>
+             <legend>Agricultural yield Prediction</legend>
+         </h1>
+        <div class="mb-3">
+            <label class="form-label">Soil Quality</label>
+            <input class="form-control" type="number" name="Soil_Quality"
+                placeholder="Enter soil Quality" min='0' max='100' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Seed Variety</label>
+            <input class="form-control" type="number" name="Seed_Variety"
+                placeholder="Enter seed Variety" min='0' max='100' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Fertilizer amount per kg</label>
+            <input class="form-control" type="number" name="Fertilizer_Amount_kg_per_hectare"
+                placeholder="Enter fertilizer amount kg per hectare" min='0' max='100' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Sunny Days</label>
+            <input class="form-control" type="number" name="Sunny_Days"
+                placeholder="Enter sunny Days" min='0' max='100' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Rainfall</label>
+            <input class="form-control" type="number" name="Rainfall_mm"
+                placeholder="Enter rainfall" min='0' max='100' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Irrigation schedule</label>
+            <input class="form-control" type="number" name="Irrigation_Schedule"
+                placeholder="Enter irrigation schedule" min='0' max='100' />
+        </div>
+        <div class="mb-3">
+            <input class="btn btn-primary" type="submit" value="Predict agriculture yield" required />
+        </div>
+    </form>
+    <h2>
+       THE  prediction is {{results}}
+    </h2>
+   <body>
+</html>
