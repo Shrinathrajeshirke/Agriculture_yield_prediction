@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agricultural Yield Forecasting</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            font-family: 'Arial', sans-serif;
+        }
+        .welcome-container {
+            background: white;
+            padding: 60px 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 600px;
+            margin: auto;
+        }
+        .welcome-title {
+            color: #333;
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .welcome-subtitle {
+            color: #666;
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+        .btn-start {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border: none;
+            padding: 15px 40px;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: white;
+            display: inline-block;
+        }
+        .btn-start:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            color: white;
+        }
+        .features {
+            margin-top: 40px;
+            text-align: left;
+        }
+        .feature-item {
+            margin: 15px 0;
+            color: #555;
+        }
+        .feature-icon {
+            color: #667eea;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="welcome-container">
+            <h1 class="welcome-title">🌾 Agricultural Yield Forecasting</h1>
+            <p class="welcome-subtitle">
+                Predict crop yields using advanced machine learning algorithms based on soil quality, 
+                weather conditions, and farming practices.
+            </p>
+            
+            <a href="{{ url_for('predict_datapoint') }}" class="btn-start">
+                🚀 Start Prediction
+            </a>
+            
+            <div class="features">
+                <h4 style="color: #333; margin-bottom: 20px;">Features:</h4>
+                <div class="feature-item">
+                    <span class="feature-icon">🔬</span>
+                    <strong>Soil Quality Analysis:</strong> Input soil quality parameters
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">🌱</span>
+                    <strong>Seed Variety Optimization:</strong> Consider different seed varieties
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">💧</span>
+                    <strong>Weather Integration:</strong> Factor in rainfall and sunny days
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">🌾</span>
+                    <strong>Fertilizer Recommendations:</strong> Optimize fertilizer usage
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">📊</span>
+                    <strong>Accurate Predictions:</strong> ML-powered yield forecasting
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
